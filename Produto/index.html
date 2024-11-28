@@ -1,52 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
-    <style>
-        table{
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table, th, td{
-            border: 1px soliod black;
-        }
-        th, td{
-            padding: 8px;
-            text-align: center;
-        }
-        th{
-            background-color: #f2f2f2
-        }
-    </style>
+    <title>Catálogo de Produtos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h2>Adicionar Produto</h2>
-    <form id="formProduto">
-        <label for="id">ID:</label><br>
-        <input type="number" id="id" required><br><br>
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" required><br><br>
-        <label for="quantidade">Quantidade:</label><br>
-        <input type="number" id="quantidade" required><br><br>
-        <label for="descricao">Descrição:</label><br>
-        <input type="text" id="descricao" required><br><br>
-        <button type="submit">Adicionar Produto</button>
-    </form>
-    <table class="table">         
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Quantidade</th>
-                <th>Descrição</th>
-            </tr>
-        </thead>
-        <tbody>
-    </table>
+    <h1>Catálogo de Produtos</h1>
+    <div id="product-form">
+        <input type="text" id="product-name" placeholder="Nome do Produto">
+        <input type="number" id="product-price" placeholder="Preço do Produto">
+        <textarea id="product-description" placeholder="Descrição do Produto"></textarea>
+        <button id="save-button" onclick="saveProduct()">Salvar Produto</button>
+    </div>
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
     <script src="script.js"></script>
 </body>
 </html>
