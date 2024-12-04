@@ -1,38 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang='pt-br'>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos Observados</title>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Stock</title>
+    <link rel='stylesheet' href='style.css'>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz' crossorigin='anonymous'></script>
 </head>
-<body>
-    <h2>Adicionar Produto</h2>
-    <div class="container">
-        <form id="formProduto">
-            <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" required><br><br>
-            <label for="quantidade">Quantidade:</label><br>
-            <input type="number" id="quantidade" required><br><br>
-            <label for="descricao">Descrição:</label><br>
-            <input type="text" id="descricao" required><br><br>
-            <button type="submit">Adicionar Produto</button>
-        </form>
-
-        <table class="table">         
-            <thead>
-                    <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Quantidade</th>
-                    <th>Descrição</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
+<body class='bg-primary justify-content-md-center'>
+    <div class='container-mb text-center'>
+        <h2 class='text-white'>Gerente de Stock</h2>
+        <div class='container justify-content-md-center align-items-center'>
+            <div class='bg-white rounded'>
+                <form id='form-product' class='shadow p-3 mb-5'>
+                    <label for='name'>Nome:</label><br>
+                    <input type='text' id='name' required><br><br>
+                    <label for='stack'>Quantidade:</label><br>
+                    <input type='number' id='stack' required><br><br>
+                    <label for='description'>Descrição:</label><br>
+                    <input type='text' id='description' required><br><br>
+                    <button type='submit'>Enviar dados</button>
+                </form>
+            </div>
+            <div class='bg-white rounded'>
+                <table class='table shadow p-3 mb-5'>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Quantidade</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <script src='stock_manager.js'></script>
 </body>
 </html>
